@@ -56,7 +56,7 @@ function comparacao(a,b){
 }
 console.log(comparacao(primNum,segNum));
 */
-
+/*
 let anoNasc = Number(prompt('Qual seu ano de nascimento?'));
 
 function calcularIdade(anoNasc){
@@ -73,4 +73,68 @@ function calcularIdade(anoNasc){
     return votar;
 }
 console.log(calcularIdade(anoNasc));
+*/
+//Switch case
 
+//Uma pessoa pode estudar em uma faculdade se:
+//Tiver concluído o ensino médio
+//Tiver 18 anos ou mais
+//Não estiver cursando outra faculdade
+//Escreva uma função que receba estes parâmetros e devolva se a pessoa pode ou não
+//estudar nesta faculdade. Receba os dados do usuário pelo prompt e execute a função
+/*
+let ensinoMedio = prompt("você concluiu o ensino medio? 1-S 2-N");
+let idade = Number(prompt("Qual a sua idade?"));
+let faculdade = prompt("Você está cursando ensino superior?");
+
+function podeEstudar(ensinoMedio,idade,faculdade){
+    let mensagem
+    if(ensinoMedio.toUpperCase() === "SIM" && idade >= 18 && faculdade.toUpperCase() === "NAO"){
+        mensagem = "seja bem vindo";
+    } else {
+        mensagem = "Você não está apto para entrar em nossa instituição!"
+    }
+    return mensagem;
+
+}  
+let resultado = podeEstudar(ensinoMedio,idade,faculdade);
+console.log(resultado);         
+*/
+
+/*
+let pais = "Argentina";
+
+switch (pais){
+    case 'Brasil':
+        console.log('Brasileiro');
+        break;
+    case 'Alemanha':
+        console.log('Alemão');
+        break;
+    case "Croacia":
+        console.log('Croata');
+        break;
+    default:
+        console.log('Sua nacionalidade não foi encontrada');
+}
+*/
+
+let num1 = Number(prompt('Informe um número'));
+let num2 = Number(prompt('Informe outro número'));
+let opcao = Number(prompt('Digite uma opção: \n1-Soma \n2-Subtração\n3-Multiplicação\n4-Divisão'));
+switch (opcao){
+    case 1:
+        console.log(num1 + num2);
+        break;
+    case 2:
+        console.log(num1 - num2);
+        break;
+    case 3:
+        console.log(num1*num2);
+        break;
+    case 4:
+        console.log(num1/num2);
+        break;
+    default:
+        console.log('Opção não encontrada');
+}
